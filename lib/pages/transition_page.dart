@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:inshort/widgets/sized_box.dart';
@@ -47,7 +46,7 @@ class _TransitionPageState extends State<TransitionPage> {
                             if (loadingProgress == null) {
                               return child;
                             } else {
-                              return Center(
+                              return const Center(
                                 child: CircularProgressIndicator(),
                               );
                             }
@@ -70,8 +69,8 @@ class _TransitionPageState extends State<TransitionPage> {
                         padding: const EdgeInsets.all(15.0),
                         child: Text(
                           widget.content??"",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.w300),
+                          style: const TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.w300,overflow: TextOverflow.fade),
                         ),
                       ),
                     ],
@@ -83,11 +82,11 @@ class _TransitionPageState extends State<TransitionPage> {
                   child: TextButton(
                       onPressed: () {},
                       child: Container(
-                        padding: EdgeInsets.fromLTRB(10, 2, 10, 2),
+                        padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(20)),
-                        child: Text(
+                        child: const Text(
                           "inshorts",
                           style: TextStyle(
                               fontWeight: FontWeight.w500, color: Colors.grey),
